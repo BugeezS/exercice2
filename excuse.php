@@ -132,21 +132,24 @@ if ($reason == "Illness") {
 $excuse = getRandomExcuse($excuses);
 
 
-echo $excuse;
+
 ?>
 <html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
     <body>
         <form action="" method="get">
-            <label for="name">Name: </label><br>
-            <input type="text" name="name" id="name"><br>
-            <label for="gender">Gender: </label><br>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+            <label for="gender">Gender: </label>
             <select name="gender" id="gender">
                 <option value="Girl">Girl</option>
                 <option value="Boy">Boy</option>
-            </select><br>
-            <label for="teacher">Name of the teacher: </label><br>
-            <input type="text" name="teacher" id="teacher"><br>
-            <label for="reason">Choose the reason: </label><br>
+            </select>
+            <label for="teacher">Name of the teacher: </label>
+            <input type="text" name="teacher" id="teacher">
+            <label for="reason">Choose the reason: </label>
             <label for="reason">Illness: </label>
             <input type="radio" name="reason" id="reason" value="illness">
             <label for="reason">Death of a pet (or a family member): </label>
@@ -154,8 +157,13 @@ echo $excuse;
             <label for="reason">Significant extra-curricular activity:</label>
             <input type="radio" name="reason" id="reason" value="activity">
             <label for="reason">Any other excuse of your choice</label>
-            <input type="radio" name="reason" id="reason" value="choice"><br>
+            <input type="radio" name="reason" id="reason" value="choice">
             <input type="submit" value="Send">
         </form>
+        <div>
+        <?php
+            echo $excuse;
+         ?>
+        </div>
     </body>
 </html>
