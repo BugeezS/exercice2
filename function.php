@@ -100,11 +100,20 @@ function decapitalize ($word){
 echo decapitalize ("MANGER");
 
 
-$volume = 5 * 5 * 3.14 * 2 * (1/3); 
-function calculate_cone_volume($volume){
-    echo 'The volume of a cone which ray is 5 and height is 2 = ' . $volume . ' cm<sup>3</sup><br />';      
+
+
+function calculateConeVolume($ray,$height){
+
+    $volume = $ray*$ray * 3.14 * $height * (1/3);
+
+    echo "The volume of a cone which ray is $ray and height is $height = $volume";
+
 }
-calculate_cone_volume($volume);
+
+calculateConeVolume(4,19);
+
+
+
 
 
 ?>
